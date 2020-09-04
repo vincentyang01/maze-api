@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'pry'
+require 'rest-client'
+require 'json'
+
+# getMaze = "http://maze-api.herokuapp.com/api/mazes/?cellShape=Square&width=20&height=20"
+# data = JSON.parse( RestClient.get("#{getMaze}") )
+
+# data[0]["dimensions"]
+# data[0]["start"]
+# data[0]["end"]
+# data[0]["cellMap"]
+
+
+
+
+
+
+
+User.create(name: "Vincent")
+
+binding.pry
