@@ -6,8 +6,8 @@ class UsersController < ApplicationController
 
     def findUser
         user = User.find_or_create_by(user_params)
-        debugger
-        render json: user
+        # debugger
+        render json: {"name": user.name, "user_id": user.id}
     end
 private
     def user_params
