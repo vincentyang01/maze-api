@@ -1,2 +1,0 @@
-class Maze < ApplicationRecord
-end
