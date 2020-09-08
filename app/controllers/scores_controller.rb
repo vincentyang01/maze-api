@@ -1,14 +1,12 @@
 class ScoresController < ApplicationController
 
-    def new
-        @score = Score.new(find_by[params])
-    end
     def create
-        @score = Score.create(params)
+        @score = Score.create(score_params)
     end
+
 private
 
-    def params
+    def score_params
         params.require(:score).permit(:value, :user_id)
     end
 end
