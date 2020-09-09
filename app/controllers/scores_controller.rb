@@ -6,10 +6,10 @@ class ScoresController < ApplicationController
 
     def maxScore
         scoresArray = Score.where(user_id: params[:id])
-        maxScore = scoresArray.max.value
-        if maxScore == nil
+        if scoresArray.empty?
             render json: { value: 0}
         else
+            maxScore = scoresArray.max.value
             render json: { value: maxScore }
         end
     end
