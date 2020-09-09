@@ -12,8 +12,8 @@ class UsersController < ApplicationController
     def show
         user = User.find(params[:id])
         total = user.totalscore
+        # byebug
         render json: { value: total }
-        # debugger
     end
 
     def update

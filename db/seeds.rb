@@ -23,6 +23,5 @@ require 'json'
 
 
 
-User.create(name: "Vincent")
 
 binding.pry
