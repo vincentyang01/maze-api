@@ -16,12 +16,3 @@ require 'json'
 # data[0]["start"]
 # data[0]["end"]
 # data[0]["cellMap"]
-
-
-
-
-
-
-
-
-binding.pry
