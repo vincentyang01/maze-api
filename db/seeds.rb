@@ -16,3 +16,9 @@ require 'json'
 # data[0]["start"]
 # data[0]["end"]
 # data[0]["cellMap"]
+
+User.create( name: "Beef", totalscore: 1000)
+User.create( name: "Steven", totalscore: rand(950))
+User.create( name: "Ian", totalscore: rand(950))
+User.create( name: "Alex", totalscore: rand(950))
+User.create( name: "Tashawn", totalscore: 30)
