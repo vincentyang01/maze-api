@@ -4,6 +4,12 @@ class UsersController < ApplicationController
         user = User.create(user_params)
     end
 
+    def index
+        users = User.all
+        high_scores = users.max(5) { |a, b| a.totalscore <=> b.totalscore }
+        render json: high_scores, only: [:name, :totalscore]
+    end
+
     def findUser
         user = User.find_or_create_by(user_params)
         render json: {"name": user.name, "user_id": user.id}

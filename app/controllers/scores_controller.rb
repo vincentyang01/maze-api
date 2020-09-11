@@ -1,15 +1,21 @@
 class ScoresController < ApplicationController
 
     def create
-        @score = Score.create(score_params)
+        score = Score.create(score_params)
     end
+
+    # def index
+    #     scores = Score.all
+    #     high_scores = scores.max(5) { |a, b| a.value <=> b.value }
+    #     render json: high_scores, only: [:user_id, :value]
+    # end
 
     def maxScore
         scoresArray = Score.where(user_id: params[:id])
         if scoresArray.empty?
             render json: { value: 0}
         else
-            maxScore = scoresArray.max.value
+            maxScore = scoresArray.max{ |a, b| a.value <=> b.value}.value
             render json: { value: maxScore }
         end
     end
